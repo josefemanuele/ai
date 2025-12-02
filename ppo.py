@@ -164,7 +164,7 @@ class PPO:
                 self.critic_optimizer.step()
             t_so_far += sum(batch_lens)
 
-env = gym.make("FrozenLake-v1", desc=generate_random_map(size=8))
-# env = gym.make("CartPole-v1")
+# env = gym.make("FrozenLake-v1", desc=generate_random_map(size=8))
+env = gym.make("CartPole-v1")
 ppo = PPO(env)
 ppo.learn(total_timesteps=100000)
